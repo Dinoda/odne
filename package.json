@@ -1,0 +1,21 @@
+{
+  "name": "odne.fibo",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "dotenv": "^17.3.1",
+    "fibo-html": "file:../../fibo.mono/packages/html",
+    "htmlfy": "^1.0.1"
+  },
+  "devDependencies": {
+    "esbuild": "^0.27.3"
+  }
+}

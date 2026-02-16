@@ -1,0 +1,95 @@
+:root {
+	--pale-purple: #7D759A;
+	--pink: #D392BE;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	background-color: black;
+	color: white;
+	background-image: url('img/bg/background.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+body #body {
+	margin: auto;
+
+	max-width: auto;
+
+	background-image: linear-gradient(90deg, transparent, black 18%, black 82%, transparent);
+	background-position: center;
+	background-size: 1800px;
+
+	overflow-x: hidden;
+}
+
+img {
+	display: block;
+	width: 100%;
+}
+
+img.short {
+	max-width: 400px;
+}
+
+header {
+	height: 200px;
+	width: 100%;
+}
+
+header img {
+	width: auto;
+	height: 100%;
+	margin: auto;
+}
+
+footer {
+	height: 200px;
+	width: 100%;
+}
+
+footer img {
+	width: auto;
+	height: 100%;
+	margin: auto;
+}
+
+main {
+	margin: auto;
+
+	max-width: 1100px;
+	width: 100%;
+
+	padding: 1.4rem;
+}
+
+main h1, main h2, main h3 {
+	color: var(--pale-purple);
+}
+
+main strong {
+	color: var(--pink);
+}
+
+main .ig {
+	text-transform: uppercase;
+	color: var(--pale-purple);
+}
+
+main div {
+	padding: 0.6rem;
+}
+
+main div.line {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+main div.line div {
+	min-width: 30%;
+	max-width: 50%;
+}
