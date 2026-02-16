@@ -1,0 +1,65 @@
+$background-image: '/img/bg/background.img';
+
+:root {
+  --black: #000;
+  --pale-purple: #7D759A;
+  --pink: #D392BE;
+  --white: #FFF;
+
+  --background: var(--black);
+  --color-important: var(--pale-purple);
+  --color-highlight: var(--pink);
+  --color-text: var(--white);
+}
+
+body {
+  padding: 0;
+  margin: 0;
+
+  background-color: var(--background);
+  color: var(--color-text);
+
+  background-image: url($background-image);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+
+
+  #body {
+    margin: auto;
+    max-width: auto;
+
+    background-image: linear-gradient(90deg, transparent, var(--background) 18%, var(--background) 82%, transparent);
+    background-position: center;
+    background-size: 1800px;
+
+    overflow-x: hidden;
+  }
+}
+
+img {
+  display: block;
+  width: 100%;
+
+  &.short {
+    max-width: 400px;
+  }
+}
+
+p {
+  img {
+    display: inline;
+    width: auto;
+  }
+}
+
+header, footer {
+  height: 200px;
+  width: 100%;
+
+  img {
+    width: auto;
+    height: 100%;
+    margin: auto;
+  }
+}

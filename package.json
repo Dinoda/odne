@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "dotenv": "^17.3.1",
+    "esbuild-sass-plugin": "^3.6.0",
     "fibo-html": "file:../../fibo.mono/packages/html",
     "htmlfy": "^1.0.1"
   },

@@ -1,23 +1,31 @@
 const files = {
-	'catalyseurs/index': {
-		filename: 'catalyseur/index.html',
+	'catalyseurs': {
+		filename: 'catalyseurs.html',
 		data: {
+			anchors: [
+				{
+					href: "#combien",
+					name: "Combien j'en ai ?",
+				},
+				{
+					href: "#direct",
+					name: "Les obtenir directement",
+				},
+				{
+					href: "#monnaies",
+					name: "Les obtenir à partir d'autres monnaies",
+				},
+				{
+					href: "#echange",
+					name: "Echanger d'autres monnaies contre des catalyseurs",
+				}
+			],
 		},
 	},
 	index: {
 		filename: 'index.html',
 		data: {
-			title: "Comment obtenir des Catalyseurs OP-1",
-			block: {
-				lines: [
-					"Vous pouvez voir combien vous en avez dans votre inventaire (par défaut \"i\"), dans l'onglet \"Récompenses\".",
-					"L'inventaire est également disponible dans la partie droite de votre équipement (par défaut \"c\").",
-				],
-				image: {
-					url: 'catalyseurs_op_1.png',
-					alt: 'Test alt',
-				},
-			}
+			anchors: [],
 		},
 	},
 };

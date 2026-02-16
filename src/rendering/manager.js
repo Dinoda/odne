@@ -12,8 +12,16 @@ const loadImage = (element, data) => {
 	});
 };
 
+const initializeAnchors = (element, data) => {
+	element.attrs.push({
+		name: 'href',
+		value: data.href,
+	});
+};
+
 export default new Manager({ 
 	callbacks: {
 		loadImage,
+		initializeAnchors,
 	}
 });
