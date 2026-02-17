@@ -13,7 +13,7 @@ esbuild.build({
 	outfile: join(process.env.PUBLIC_DIRECTORY, 'app.js'),
 	plugins: [sassPlugin()],
 	external: [
-		'/img/*',
+		'img/*',
 	],
 });
 
