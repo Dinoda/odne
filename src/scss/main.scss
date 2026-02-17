@@ -21,6 +21,24 @@ main {
     color: var(--color-important);
   }
 
+  .artefact {
+    text-transform: uppercase;
+    color: var(--color-artefact);
+  }
+
+  .legendary {
+    text-transform: uppercase;
+    color: var(--color-legendary);
+  }
+
+  .index {
+    font-weight: bold;
+    font-size: 1.2em;
+    font-family: sans-serif;
+    color: var(--color-index);
+
+  }
+
   div {
     padding: 0.6rem;
 
@@ -35,5 +53,18 @@ main {
       }
     }
   }
+  
+  img {
+    border: 2px solid var(--color-text);
+    border-radius: 0.4rem;
+
+    cursor: pointer;
+
+
+    &:hover {
+      border: 2px solid var(--color-important);
+    }
+  }
+
 
 }

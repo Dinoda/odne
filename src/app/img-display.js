@@ -1,24 +1,14 @@
-const body = document.body;
-
-const overlay = document.createElement('div');
-overlay.classList = 'overlay';
-overlay.style.display = 'none';
-const imageDisplay = document.createElement('img');
-
-overlay.appendChild(imageDisplay);
-
-
-overlay.addEventListener('click', () => {
-	overlay.style.display = 'none';
-});
-body.appendChild(overlay);
+import displayOverlay from './overlay.js';
 
 const images = document.querySelectorAll('img');
 
-images.map((image) => {
+for (const image of images) {
 	image.addEventListener('click', () => {
-		imageDisplay.src = image.src;
-		overlay.style.display = 'block';
+		const display = document.createElement('img');
+
+		display.src = image.src;
+
+		displayOverlay(display);
 	});
-});
+}
 

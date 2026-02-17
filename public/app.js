@@ -1,20 +1,28 @@
 (() => {
-  // src/app/img-display.js
+  // src/app/overlay.js
   var body = document.body;
   var overlay = document.createElement("div");
   overlay.classList = "overlay";
   overlay.style.display = "none";
-  var imageDisplay = document.createElement("img");
-  overlay.appendChild(imageDisplay);
+  var overlayContent = document.createElement("div");
+  overlay.appendChild(overlayContent);
+  body.appendChild(overlay);
   overlay.addEventListener("click", () => {
     overlay.style.display = "none";
+    overlayContent.innerHTML = "";
   });
-  body.appendChild(overlay);
+  function displayOverlay(content) {
+    overlayContent.appendChild(content);
+    overlay.style.display = "block";
+  }
+
+  // src/app/img-display.js
   var images = document.querySelectorAll("img");
-  images.map((image) => {
+  for (const image of images) {
     image.addEventListener("click", () => {
-      imageDisplay.src = image.src;
-      overlay.style.display = "block";
+      const display = document.createElement("img");
+      display.src = image.src;
+      displayOverlay(display);
     });
-  });
+  }
 })();
