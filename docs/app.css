@@ -4,13 +4,13 @@
   --pale-purple: #7D759A;
   --pink: #D392BE;
   --white: #FFF;
-  --artefact-purple: #AE10EA;
-  --legendary-gold: #D5B53B;
-  --index-blue: #ADEEF8;
   --background: var(--black);
   --color-important: var(--pale-purple);
   --color-highlight: var(--pink);
   --color-text: var(--white);
+  --artefact-purple: #AE10EA;
+  --legendary-gold: #D5B53B;
+  --index-blue: #ADEEF8;
   --color-artefact: var(--artefact-purple);
   --color-legendary: var(--legendary-gold);
   --color-index: var(--index-blue);
@@ -63,12 +63,45 @@ footer img {
   margin: auto;
 }
 nav {
-  position: fixed;
-  top: -1rem;
-  left: -1rem;
+  margin: auto;
+  max-width: 1100px;
+  width: 100%;
   padding: 1rem;
   border: 1px solid rgba(0, 0, 0, 0.3);
   background-color: rgba(0, 0, 0, 0.5);
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+}
+nav .tab {
+  width: 18rem;
+}
+nav .tab.open div:last-child {
+  display: block;
+}
+nav .tab.open span {
+  transform: rotate(90deg);
+}
+nav .tab span {
+  display: inline-block;
+  transition: all 0.8s ease;
+  transform: rotate(0deg);
+}
+nav .tab div {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 0.4rem;
+  padding: 0.4rem;
+  padding-left: 0.8rem;
+  box-sizing: border-box;
+}
+nav .tab div:first-child {
+  min-height: 30px;
+  line-height: 30px;
+  margin-bottom: 0.2rem;
+}
+nav .tab div:last-child {
+  position: absolute;
+  display: none;
 }
 nav a {
   display: block;
@@ -87,6 +120,14 @@ blockquote {
   padding: 1.6rem;
   border-left: 4px solid lightblue;
   background-color: rgba(255, 255, 255, 0.3);
+}
+a {
+  text-decoration: none;
+  font-weight: bold;
+  color: var(--color-important);
+}
+a:hover {
+  text-decoration: underline;
 }
 main {
   margin: auto;
