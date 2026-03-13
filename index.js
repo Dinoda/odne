@@ -14,6 +14,8 @@ esbuild.build({
 	plugins: [sassPlugin()],
 	external: [
 		'img/*',
+		'*.css',
+		'*.js',
 	],
 });
 
