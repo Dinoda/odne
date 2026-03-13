@@ -8,6 +8,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
+    "serve": "cd docs && php -S localhost:3000",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {

@@ -58,13 +58,16 @@ main {
     border: 2px solid var(--color-text);
     border-radius: 0.4rem;
 
-    cursor: pointer;
-
+    cursor: zoom-in;
 
     &:hover {
       border: 2px solid var(--color-important);
     }
   }
 
-
+  .warning {
+    font-weight: 500;
+    font-size: 1.1em;
+    color: var(--color-warning);
+  }
 }

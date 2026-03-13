@@ -2,7 +2,20 @@ const files = {
 	amelioration: {
 		filename: 'amelioration.html',
 		data: {
-			anchors: [],
+			anchors: [
+				{
+					href: "#besoin",
+					name: "De quoi je vais avoir besoin ?",
+				},
+				{
+					href: "#index",
+					name: "Tout d'abord, l'index"
+				},
+				{
+					href: "#amelioration",
+					name: "Pour finir, les modifications",
+				}
+			],
 		},
 	},
 	'catalyseurs': {

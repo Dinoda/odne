@@ -1,6 +1,6 @@
 import displayOverlay from './overlay.js';
 
-const images = document.querySelectorAll('img');
+const images = document.querySelectorAll('main img');
 
 for (const image of images) {
 	image.addEventListener('click', () => {
