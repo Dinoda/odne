@@ -1,13 +1,47 @@
 (() => {
-  var __require = /* @__PURE__ */ ((x) => typeof require !== "undefined" ? require : typeof Proxy !== "undefined" ? new Proxy(x, {
-    get: (a, b) => (typeof require !== "undefined" ? require : a)[b]
-  }) : x)(function(x) {
-    if (typeof require !== "undefined") return require.apply(this, arguments);
-    throw Error('Dynamic require of "' + x + '" is not supported');
+  // src/app/overlay.js
+  var body = document.body;
+  var overlay = document.createElement("div");
+  overlay.classList = "overlay";
+  overlay.style.display = "none";
+  var overlayContent = document.createElement("div");
+  overlay.appendChild(overlayContent);
+  body.appendChild(overlay);
+  overlay.addEventListener("click", () => {
+    overlay.style.display = "none";
+    overlayContent.innerHTML = "";
   });
+  function displayOverlay(content) {
+    overlayContent.appendChild(content);
+    overlay.style.display = "block";
+  }
 
-  // src/app/app.js
-  var import_img_display = __require("./img-display.js");
-  var import_tab = __require("./tab.js");
-  var import_anchorlist = __require("./anchorlist.js");
+  // src/app/img-display.js
+  var images = document.querySelectorAll("main img");
+  for (const image of images) {
+    image.addEventListener("click", () => {
+      const display = document.createElement("img");
+      display.src = image.src;
+      displayOverlay(display);
+    });
+  }
+
+  // src/app/tab.js
+  var tabs = document.querySelectorAll(".tab");
+  for (const tab of tabs) {
+    tab.addEventListener("click", () => {
+      tab.classList.toggle("open");
+    });
+  }
+
+  // src/app/anchorlist.js
+  var anchors = document.getElementById("anchors");
+  var anchorButton = anchors.querySelector(".anchors-btn");
+  anchorButton.addEventListener("click", () => {
+    anchors.classList.toggle("open");
+  });
+  var anchorList = anchors.querySelector(".anchor-list");
+  anchorList.addEventListener("click", () => {
+    anchors.classList.remove("open");
+  });
 })();
