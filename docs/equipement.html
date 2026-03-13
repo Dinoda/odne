@@ -2,22 +2,35 @@
   <html>
     <head>
       <title>Ordre de la Nébuleuse Eclatante</title>
-      <link rel="stylesheet" href="app.css">
+      <link rel="stylesheet" href="/app.css">
     </head>
     <body>
       <div id="body">
-        <header>
-          <img src="img/logo/swtor_logo_title.png" alt="Logo titre de Star Wars - The Old Republic">
-        </header>
-        <nav>
-          <div>
-            <a href="index.html">Accueil</a>
-            <a href="catalyseurs.html">Catalyseurs OP-1</a>
-            <a href="equipement.html">Avoir un bon équipement</a>
-            <a href="amelioration.html">Améliorer mon équipement</a>
+        <nav id="menu">
+          <div class="tab">
+            <div class="head">
+              <span>►</span>
+              Equipements
+            </div>
+            <div class="links">
+              <a href="catalyseurs.html">Catalyseurs OP-1</a>
+              <a href="equipement.html">Avoir un bon équipement</a>
+              <a href="amelioration.html">Améliorer mon équipement</a>
+            </div>
           </div>
-          <hr>
-          <div>
+        </nav>
+        <header>
+          <a href="index.html">
+            <img src="img/logo/swtor_logo_title.png" alt="Logo titre de Star Wars - The Old Republic">
+          </a>
+        </header>
+        <nav id="anchors">
+          <div class="anchors-btn burger-menu">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <div class="anchor-list">
             <a href="#besoin">De quoi je vais avoir besoin ?</a>
             <a href="#cest-ou">Je vais où ?!</a>
             <a href="#le-gros">Le gros de mon équipement</a>
@@ -27,10 +40,27 @@
         </nav>
         <main>
           <div>
+            <nav id="anchors">
+              <div class="anchors-btn burger-menu">
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+              <div class="anchor-list">
+                <a href="#besoin">De quoi je vais avoir besoin ?</a>
+                <a href="#cest-ou">Je vais où ?!</a>
+                <a href="#le-gros">Le gros de mon équipement</a>
+                <a href="#implants">Et mes implants du coup ?</a>
+                <a href="#tactique">Une carte tactique ?</a>
+              </div>
+            </nav>
             <h1>Avoir un bon équipement</h1>
-            <section>
+            <section id="intro">
               <p>Ecrit le 17 février 2026</p>
+              <p class="version">7.8</p>
               <img src="img/equipement/fenetre_equipement.png" alt="Fenêtre d'équipement">
+            </section>
+            <section>
               <h2 id="besoin">De quoi je vais avoir besoin ?</h2>
               <div class="line">
                 <div>
@@ -45,8 +75,8 @@
                     <li>Catalyseur OP-1</li>
                   </ul>
                   <p>
-                    Vous pouvez également trouver comment obtenir des catalyseurs à partir des stabilisateurs
-                    <a href="/catalyseurs.html">ici</a>
+                    Vous pourrez trouver comment obtenir des catalyseurs
+                    <a href="/catalyseurs.html">ici</a>.
                   </p>
                 </div>
                 <div>
@@ -192,6 +222,6 @@
           <img src="img/logo/banniere.png" alt="Bannière de l'Ordre de la Nébuleuse Eclatante">
         </footer>
       </div>
-      <script src="app.js"></script>
+      <script src="/app.js"></script>
     </body>
   </html>

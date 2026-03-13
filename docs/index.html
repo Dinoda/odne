@@ -2,22 +2,35 @@
   <html>
     <head>
       <title>Ordre de la Nébuleuse Eclatante</title>
-      <link rel="stylesheet" href="app.css">
+      <link rel="stylesheet" href="/app.css">
     </head>
     <body>
       <div id="body">
-        <header>
-          <img src="img/logo/swtor_logo_title.png" alt="Logo titre de Star Wars - The Old Republic">
-        </header>
-        <nav>
-          <div>
-            <a href="index.html">Accueil</a>
-            <a href="catalyseurs.html">Catalyseurs OP-1</a>
-            <a href="equipement.html">Avoir un bon équipement</a>
-            <a href="amelioration.html">Améliorer mon équipement</a>
+        <nav id="menu">
+          <div class="tab">
+            <div class="head">
+              <span>►</span>
+              Equipements
+            </div>
+            <div class="links">
+              <a href="catalyseurs.html">Catalyseurs OP-1</a>
+              <a href="equipement.html">Avoir un bon équipement</a>
+              <a href="amelioration.html">Améliorer mon équipement</a>
+            </div>
           </div>
-          <hr>
-          <div></div>
+        </nav>
+        <header>
+          <a href="index.html">
+            <img src="img/logo/swtor_logo_title.png" alt="Logo titre de Star Wars - The Old Republic">
+          </a>
+        </header>
+        <nav id="anchors">
+          <div class="anchors-btn burger-menu">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+          <div class="anchor-list"></div>
         </nav>
         <main>
           <div>
@@ -33,6 +46,6 @@
           <img src="img/logo/banniere.png" alt="Bannière de l'Ordre de la Nébuleuse Eclatante">
         </footer>
       </div>
-      <script src="app.js"></script>
+      <script src="/app.js"></script>
     </body>
   </html>

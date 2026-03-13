@@ -17,7 +17,7 @@
   }
 
   // src/app/img-display.js
-  var images = document.querySelectorAll("img");
+  var images = document.querySelectorAll("main img");
   for (const image of images) {
     image.addEventListener("click", () => {
       const display = document.createElement("img");
@@ -25,4 +25,23 @@
       displayOverlay(display);
     });
   }
+
+  // src/app/tab.js
+  var tabs = document.querySelectorAll(".tab");
+  for (const tab of tabs) {
+    tab.addEventListener("click", () => {
+      tab.classList.toggle("open");
+    });
+  }
+
+  // src/app/anchorlist.js
+  var anchors = document.getElementById("anchors");
+  var anchorButton = anchors.querySelector(".anchors-btn");
+  anchorButton.addEventListener("click", () => {
+    anchors.classList.toggle("open");
+  });
+  var anchorList = anchors.querySelector(".anchor-list");
+  anchorList.addEventListener("click", () => {
+    anchors.classList.remove("open");
+  });
 })();
